@@ -8,7 +8,7 @@ from schemas import UserCreate, User, UserUpdate
 from utils import create_access_token, verify_password
 from sqlalchemy.orm import Session
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
 models.Base.metadata.create_all(bind=engine)
 
 origins = [
